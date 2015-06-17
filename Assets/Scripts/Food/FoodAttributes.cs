@@ -2,16 +2,17 @@
 using System.Collections;
 
 public class FoodAttributes : MonoBehaviour {
-
-	public float energy;
+	
 	public float growth;
 	public float mass;
-	public float size;
+	public float energy;
+
+	private float size;
 	
 	// Use this for initialization
 	void Start () {
-		growth = Random.Range (0.01f, 0.03f);
-		mass = Random.Range(0.5f, 3f);
+		growth = Random.Range (0.01f, growth);
+		mass = Random.Range(0.5f, mass);
 		energy = mass;
 		size = mass / 100f;
 
